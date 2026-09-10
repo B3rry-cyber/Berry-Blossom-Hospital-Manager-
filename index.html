@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berry Blossom Hospital Manager</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff8f8;
+      color: #332d30;
+      padding-bottom: 95px;
+    }
+
+    .app-header {
+      background: linear-gradient(180deg, #f7c3cf, #fbdde3);
+      padding: 28px 20px 24px;
+      text-align: center;
+      border-bottom-left-radius: 28px;
+      border-bottom-right-radius: 28px;
+    }
+
+    .logo {
+      font-size: 42px;
+      margin-bottom: 8px;
+    }
+
+    .app-header h1 {
+      margin: 0;
+      color: #b74f69;
+      font-size: 30px;
+      line-height: 1.15;
+    }
+
+    .app-header p {
+      margin: 10px 0 0;
+      color: #765b63;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .welcome-card {
+      background: white;
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 6px 20px rgba(90, 50, 60, 0.08);
+      margin-bottom: 20px;
+    }
+
+    .welcome-card h2 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+
+    .welcome-card p {
+      margin: 0;
+      color: #6e6569;
+      line-height: 1.5;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .stat-card {
+      background: white;
+      border-radius: 22px;
+      padding: 18px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(90, 50, 60, 0.07);
+    }
+
+    .stat-icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .stat-number {
+      font-size: 28px;
+      font-weight: bold;
+      color: #c35772;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: #5e5559;
+    }
+
+    .section-title {
+      margin: 28px 0 14px;
+      font-size: 22px;
+    }
+
+    .actions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .action-card {
+      border: none;
+      border-radius: 20px;
+      padding: 18px 14px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      min-height: 110px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 6px 18px rgba(90, 50, 60, 0.07);
+    }
+
+    .action-card span {
+      font-size: 28px;
+    }
+
+    .pink {
+      background: #d56b83;
+      color: white;
+    }
+
+    .sage {
+      background: #dfeadb;
+      color: #4e6650;
+    }
+
+    .blush {
+      background: #f8dce3;
+      color: #9c4c62;
+    }
+
+    .cream {
+      background: #fff0df;
+      color: #8a654a;
+    }
+
+    .quote-card {
+      margin-top: 24px;
+      background: #fffdfd;
+      border: 1px solid #f5d9df;
+      border-radius: 20px;
+      padding: 18px;
+      text-align: center;
+      color: #8a626d;
+      font-style: italic;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 78px;
+      background: white;
+      border-top: 1px solid #f0d9df;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      align-items: center;
+      box-shadow: 0 -4px 16px rgba(90, 50, 60, 0.07);
+      z-index: 10;
+    }
+
+    .nav-item {
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+    }
+
+    .nav-icon {
+      font-size: 22px;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .nav-item.active {
+      color: #c35772;
+      font-weight: bold;
+    }
+
+    @media (min-width: 700px) {
+      .app-header h1 {
+        font-size: 38px;
+      }
+
+      .stats-grid,
+      .actions-grid {
+        gap: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="app-header">
+    <div class="logo">🍓🏥</div>
+    <h1>Berry Blossom<br>Hospital Manager</h1>
+    <p>Manage • Support • Train • Grow</p>
+  </header>
+
+  <main>
+
+    <section class="welcome-card">
+      <h2>Good morning! 🌸</h2>
+      <p>Welcome back to your hospital management dashboard.</p>
+    </section>
+
+    <section class="stats-grid">
+
+      <div class="stat-card">
+        <div class="stat-icon">👩‍⚕️</div>
+        <div class="stat-number">24</div>
+        <div class="stat-label">Staff On Shift</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">📋</div>
+        <div class="stat-number">8</div>
+        <div class="stat-label">Pending Applications</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">🎓</div>
+        <div class="stat-number">5</div>
+        <div class="stat-label">Upcoming Trainings</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">⚠️</div>
+        <div class="stat-number">3</div>
+        <div class="stat-label">Staff Warnings</div>
+      </div>
+
+    </section>
+
+    <h2 class="section-title">Quick Actions</h2>
+
+    <section class="actions-grid">
+
+      <button class="action-card pink">
+        <span>▶️</span>
+        Start Shift
+      </button>
+
+      <button class="action-card sage">
+        <span>🎓</span>
+        Create Training
+      </button>
+
+      <button class="action-card blush">
+        <span>📄</span>
+        Review Applications
+      </button>
+
+      <button class="action-card cream">
+        <span>🩺</span>
+        Add Scenario
+      </button>
+
+    </section>
+
+    <div class="quote-card">
+      “Kind people. Great care. Stronger communities.” 🌷
+    </div>
+
+  </main>
+
+  <nav class="bottom-nav">
+
+    <div class="nav-item active">
+      <span class="nav-icon">🏠</span>
+      Home
+    </div>
+
+    <div class="nav-item">
+      <span class="nav-icon">👩‍⚕️</span>
+      Staff
+    </div>
+
+    <div class="nav-item">
+      <span class="nav-icon">🎓</span>
+      Training
+    </div>
+
+    <div class="nav-item">
+      <span class="nav-icon">📅</span>
+      Schedule
+    </div>
+
+    <div class="nav-item">
+      <span class="nav-icon">•••</span>
+      More
+    </div>
+
+  </nav>
+
+</body>
+</html>
